@@ -9,7 +9,8 @@ import {
 const router = express.Router();
 
 // POST /jobs - Create a new job
-router.route("/").post(createJob).get(getAllJobs);       // Get all jobs
+router.route("/").get(getAllJobs);       // Get all jobs
+router.route("/create").post(createJob);
 router.get('/:id', getJobById);    // Get job by ID
 
 
